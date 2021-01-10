@@ -9,6 +9,25 @@
 void clearf() {
     std::cout << "\x1B[2J\x1B[H";
 }
+void challengeONE() {
+    typewriter("Hello contestant. Here is the first challenge. You will have to answer a seires of questions to earn tokens. ", 50);
+    usleep(2 * microsecond);
+    clearf();
+    typewriter("While you are beushing your teeth, do you...", 50);
+    std::cout << "[1] Leave the water running\n";
+    std::cout << "[2] Turn it off then back on at the end\n";
+    typewriter("Which one? [1/2]\n", 50);
+    std::string << challengeONEplayerINPUT;
+    std::cin << challengeONEplayerINPUT;
+    if (challengeONEplayerINPUT == "1") {
+        typewriter("That isn't good. You get NO coins.", 50);
+        coins = 0;
+    }
+    else if (challengeONEplayerINPUT "2") {
+        typewriter("YEAH!! You did the right thing! You get one coin. ", 50);
+        coins = 1;
+    }
+}
 int main() {
   unsigned int microsecond = 1000000; 
   char normal[] = "\x1b[0;39m";
@@ -37,5 +56,8 @@ int main() {
   typewriter("Here is the first challenge.", 50);
   usleep(2 * microsecond);
   clearf();
-  
+  challengeONE();
+  usleep(2 * microsecond);
+  clearf();
+  typewriter("You know have " + std::to_string(coins) + " coins." 50);
 }
