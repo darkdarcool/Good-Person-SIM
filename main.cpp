@@ -34,5 +34,8 @@ int main() {
   typewriter("\nToday we will be testing you by seeing how good of a person you are.\nThe more coins, the more that you are a good person.", 50);
   usleep(2 * microsecond);
   clearf();
+  typewriter("Here is the first challenge.", 50);
+  usleep(2 * microsecond);
+  clearf();
   
 }
